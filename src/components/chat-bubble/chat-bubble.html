@@ -1,0 +1,9 @@
+<div class="chatBubble">
+  <img class="profile-pic left" *ngIf="! msg.isMe" src="assets/img/profile.png" />
+  <div class="message-detail {{msg.isMe === true ? 'right' : 'left'}}">
+    <span>{{msg.time | date:'shortTime' }}</span>
+  </div>
+  <div class="chat-bubble {{msg.isMe === true ? 'right' : 'left'}}">
+    <div class="message">{{ msg.content }}</div>
+  </div>
+</div>
